@@ -7,24 +7,20 @@
 </head>
 <body>
    <p>
-      <a href="index.html" target="_blank"> Переход на главную</a>
+      <a href="index.html">Домой - переход на главную страницу</a>
    </p>
-   <form action="/test">
+   <a href="forma.html">Переход на вкладку форма</a>
+
+   <!-- <form action="/test">
       <input type="hidden" name="hid">
-      <!-- http://127.0.0.1:5500/test?hid=&email=&password=&birtydate=&color=%23000000 -->
-      <!--
-         http://127.0.0.1:5500/test?hid=&email=sdf%40mail.ru&password=545412145&birtydate=2024-04-02&color=%234a9b27
-      -->
       <div>
          <label for="email">Введите email</label>
          <input type="email" placeholder="Email пользователя" id="email" name="email" value="fg@mail.ru">
       </div>
-
       <div>
          <label for="password">Введите пароль</label>
          <input type="password" placeholder="Пароль пользователя" id="password" name="password">
       </div>
-
       <div>
          <label for="birtydate">Дата рождения</label>
          <input type="date" placeholder="Дата рождения" id="birtydate" name="birtydate">
@@ -32,7 +28,63 @@
       <label for="color">Введите цвет</label>
       <input type="color" id="color" name="color">
       <button type="submit">Кнопка</button>
+   </form> -->
+
+   <!-- Поиск и запрос в YouTube-->
+   <form action= "#">
+
+<hr>
+      <div>
+
+         <label for="query">  Введите запрос</label>
+         <input type="text" placeholder="Запрос.." id="query" name="search_query" title="Введите только цифры"  minlength="3" maxlength="20" pattern="/>\d+$/">
+         <input type="email" name="email" id="">
+         <input type="url" name="url" id="">
+      </div>
+      <div>
+      <label for="agree">Согласен с обработкой данных</label>
+      <input type="checkbox" name="agree" id="agree">
+      </div>
+
+      <div>
+         <input type="radio" name="search" id="all" value="all">
+         <label for="all">Поиск повсюду</label>
+      </div>
+      <div>
+         <input type="radio" name="search" id="youtube" value="youtube">
+         <label for="youtube">Поиск на YouTube</label>
+      </div>
+
+      <div>
+         <label for="topic">Тематика</label>
+         <select name="topic" id="topic">
+            <option value="1">Все</option>
+            <optgroup label="Популярные"> 
+            <option value="2">Живтоные</option>
+            <option value="3" selected>Разработка</option>
+               </optgroup>
+
+               <option value="1">Все</option>
+               <optgroup label="Популярные">
+                  <option value="2">Живтоные</option>
+                  <option value="3" selected>Разработка</option>
+               </optgroup>
+         </select>
+      </div>
+      <div>
+         <label for="volume">Громкость</label>
+         <input type="range" name="volume" id="volume" min="0" max="10" step="2">
+      </div>
+      <div>
+         <label for="num">Оценка</label>
+         <input type="number" name="num" id="num" min="0" max="5" step="1">
+      </div>
+      <div>
+         <label for="text">Коментарий</label>
+         <textarea name="text" id="text" rows="10" cols="100" placeholder="Введите текст"></textarea>
+      </div>
+      <button>Искать на YouTube</button>
    </form>
-   <button>Кнопка вне формы</button>
+
 </body>
 </html>
